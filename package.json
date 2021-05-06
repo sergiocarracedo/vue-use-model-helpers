@@ -1,0 +1,38 @@
+{
+  "name": "vue-use-model-helpers",
+  "version": "1.0.0-beta.1",
+  "description": "Helpers to manage custom v-model and .sync using composition API",
+  "author": "Sergio Carracedo <hi@sergiocarracedo.es>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "vue",
+    "v-model",
+    "composition-api",
+    "props"
+  ],
+  "main": "src/index.ts",
+  "typings": "dist/types/index.d.ts",
+  "scripts": {
+    "prepublish": "npx tsc --build tsconfig.json",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiocarracedo/vue-use-model-helpers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sergiocarracedo/vue-use-model-helpers/issues"
+  },
+  "homepage": "https://github.com/sergiocarracedo/vue-use-model-helpers#readme",
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@vue/composition-api": "^1.0.0-rc.8",
+    "@vue/test-utils": "^1.0.0-beta.33",
+    "jest": "^25.3.0",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.2",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
