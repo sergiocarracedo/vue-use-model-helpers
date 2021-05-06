@@ -21,9 +21,9 @@ The motivation of this library is simplifying this task and reducing the amount 
 ## Getting started
 
 ### Install
-`npm i vue-use-model-helper --save-dev` 
+`npm i vue-use-model-helper --save` 
 or
-`yarn add -D vue-use-model-helper`
+`yarn add vue-use-model-helper`
 
 ### Usage
 In your component:
