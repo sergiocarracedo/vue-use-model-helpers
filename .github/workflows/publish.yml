@@ -17,7 +17,7 @@ jobs:
         uses: EndBug/version-check@v1
 
       - name: Publish when changed
-        if: steps.check.outputs.changed == 'true'
+        #if: steps.check.outputs.changed == 'true'
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
