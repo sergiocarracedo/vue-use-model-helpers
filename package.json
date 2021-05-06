@@ -1,6 +1,6 @@
 {
   "name": "vue-use-model-helpers",
-  "version": "1.0.0-beta.1",
+  "version": "0.0.2",
   "description": "Helpers to manage custom v-model and .sync using composition API",
   "author": "Sergio Carracedo <hi@sergiocarracedo.es>",
   "license": "MIT",

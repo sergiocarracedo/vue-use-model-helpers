@@ -2,6 +2,7 @@
 
 This library provides a helper to convert a component's property to a local Ref you can mutate when you are using composition-api, simplifying  the management of the custom `v-model` and `.sync`
 
+This library works with Vue 2.x
 
 ## Motivation
 
@@ -86,4 +87,8 @@ export default defineComponent({
   ...
 })
 ```
+
+## Next steps
+Create a version for Vue 3
+
 Proudly created in Vigo and around its [local community](https://vigotech.org)
