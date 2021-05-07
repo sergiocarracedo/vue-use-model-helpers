@@ -15,7 +15,7 @@ export function useLocalModel (models: string[]): Record<string, Ref> {
     localModels[name] = ref(props[model])
 
     watch(localModels[name], (newValue) => {
-      proxy.$emit(`update:${model}`, newValue)
+      proxy && proxy.$emit(`update:${model}`, newValue)
     })
 
     watch(() => props[model], (newValue) => {
