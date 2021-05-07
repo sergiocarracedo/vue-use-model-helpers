@@ -1,7 +1,7 @@
 name: Publish To NPM
 on:
   push:
-    branches: [ main, vue-3 ]
+    branches: [ "2.x", "3.x" ]
 
 jobs:
   build:

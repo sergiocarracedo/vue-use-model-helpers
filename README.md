@@ -23,14 +23,14 @@ The motivation of this library is simplifying this task and reducing the amount 
 ### Install
 
 ## Vue 2.x
-`npm i vue-use-model-helper@^1 --save` 
+`npm i vue-use-model-helper@2.x --save` 
 or
-`yarn add vue-use-model-helper@^1`
+`yarn add vue-use-model-helper@2.x`
 
 ## Vue 3
-`npm i vue-use-model-helper@^3 --save`
+`npm i vue-use-model-helper@3.x --save`
 or
-`yarn add vue-use-model-helper@^3`
+`yarn add vue-use-model-helper@3.x`
 
 
 ### Usage
