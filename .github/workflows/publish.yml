@@ -1,7 +1,7 @@
 name: Publish To NPM
 on:
   push:
-    branches: [ main ]
+    branches: [ main, vue-3 ]
 
 jobs:
   build:
@@ -10,6 +10,12 @@ jobs:
     steps:
 
       - uses: actions/checkout@v2
+
+      - name: NPM install
+        run: npm i
+
+      - name: NPM build
+        run: npm run build
 
       - name: Check if version has been updated
         id: check

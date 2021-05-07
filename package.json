@@ -14,7 +14,7 @@
   "main": "src/index.ts",
   "typings": "dist/types/index.d.ts",
   "scripts": {
-    "prepublish": "npx tsc --build tsconfig.json",
+    "build": "npx tsc --build tsconfig.json",
     "test": "jest"
   },
   "repository": {
