@@ -1,19 +1,24 @@
 name: Publish To NPM
 on:
   push:
-    branches: [ main ]
+    branches: [ main, vue-3 ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-
       - uses: actions/checkout@v2
 
       - name: Check if version has been updated
         id: check
         uses: EndBug/version-check@v1
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build --if-present
 
       - name: Publish when changed
         if: steps.check.outputs.changed == 'true'

@@ -1,4 +1,4 @@
-import { getCurrentInstance, Ref, ref, watch } from '@vue/composition-api'
+import { getCurrentInstance, Ref, ref, watch } from 'vue'
 
 export function useLocalModel (models: string[]): Record<string, Ref> {
   const vm = getCurrentInstance()
@@ -15,11 +15,7 @@ export function useLocalModel (models: string[]): Record<string, Ref> {
     localModels[name] = ref(props[model])
 
     watch(localModels[name], (newValue) => {
-      if (name === 'localValue') {
-        proxy.$emit('input', newValue)
-      } else {
-        proxy.$emit(`update:${model}`, newValue)
-      }
+      proxy.$emit(`update:${model}`, newValue)
     })
 
     watch(() => props[model], (newValue) => {

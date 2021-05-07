@@ -2,7 +2,7 @@
 
 This library provides a helper to convert a component's property to a local Ref you can mutate when you are using composition-api, simplifying  the management of the custom `v-model` and `.sync`
 
-This library works with Vue 2.x
+This library works with Vue 2.x and Vue 3
 
 ## Motivation
 
@@ -21,9 +21,17 @@ The motivation of this library is simplifying this task and reducing the amount 
 ## Getting started
 
 ### Install
-`npm i vue-use-model-helper --save` 
+
+## Vue 2.x
+`npm i vue-use-model-helper@^1 --save` 
 or
-`yarn add vue-use-model-helper`
+`yarn add vue-use-model-helper@^1`
+
+## Vue 3
+`npm i vue-use-model-helper@^3 --save`
+or
+`yarn add vue-use-model-helper@^3`
+
 
 ### Usage
 In your component:
@@ -87,8 +95,5 @@ export default defineComponent({
   ...
 })
 ```
-
-## Next steps
-Create a version for Vue 3
 
 Proudly created in Vigo and around its [local community](https://vigotech.org)
