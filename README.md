@@ -4,6 +4,8 @@ This library provides a helper to convert a component's property to a local Ref 
 
 This library works with Vue 2.x and Vue 3
 
+> For Vue 3 check `3.x` branch
+
 ## Motivation
 
 When you create a component that gets a property and then needs to mutate it into the component you get this vue warn
@@ -94,8 +96,5 @@ export default defineComponent({
   ...
 })
 ```
-
-## Next steps
-Create a version for Vue 3
 
 Proudly created in Vigo and around its [local community](https://vigotech.org)
