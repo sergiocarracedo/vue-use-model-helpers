@@ -20,7 +20,7 @@ export function useLocalModel (models: string[]): Record<string, Ref> {
 
     watch(() => props[model], (newValue) => {
       localModels[name].value = newValue
-    })
+    }, { deep: true })
   })
 
   return {
