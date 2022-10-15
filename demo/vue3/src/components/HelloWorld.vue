@@ -10,6 +10,7 @@
 <script setup lang="ts">
 import TestComponent from './TestComponent.vue'
 import { ref } from 'vue'
-const count = ref(0)
+
+const count = ref(56)
 </script>
 

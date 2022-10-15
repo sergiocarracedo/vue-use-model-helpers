@@ -1,5 +1,4 @@
-import { isVue2, isVue3, toRef, getCurrentInstance, Ref, ref, watch, UnwrapRef, ToRefs } from 'vue-demi'
-import { toRefs } from 'vue'
+import { getCurrentInstance, isVue2, Ref, toRef, UnwrapRef, watch } from 'vue-demi'
 
 const getEventName = (model: string): string => {
   if (isVue2 && model === 'value') {
@@ -9,66 +8,28 @@ const getEventName = (model: string): string => {
 }
 
 
-//
-// export function useLocalModel <T>(model: string): Ref<T> {
-//   const vm = getCurrentInstance()
-//   if (!vm) {
-//     throw new Error('You must use this function within the "setup()" method')
-//   }
-//
-//   const { proxy, props } = vm
-//
-//   const localModel: Ref<T> = ref(props[model])
-//
-//
-//   watch(localModel, (newValue) => {
-//     const event = getEventName(model)
-//     proxy && proxy.$emit(event, newValue)
-//   })
-//
-//
-//   watch(() => props[model], (newValue: T) => {
-//     localModel.value = newValue
-//   })
-//
-//   return localModel
-// }
+type ToRef<T> = [T] extends [Ref] ? T : Ref<UnwrapRef<T>>;
 
-const getLocalName = (model: string): string => {
-  return `local${model.toString().charAt(0).toUpperCase()}${model.toString().slice(1)}`
-}
-
-export function useLocalModel <T>(props: T, models: (keyof T)[]): Record<string, ToRefs<T>> {
+export function useLocalModel <T extends object, K extends keyof T>(props: T, key: K): ToRef<T[K]> {
   const vm = getCurrentInstance()
+
   if (!vm) {
     throw new Error('You must use this function within the "setup()" method')
   }
 
-
   const { proxy } = vm
 
-  const localModels = toRefs(props)
+  const local = toRef(props, key)
 
-  // const localModels: Record<string, ToRef<T[keyof T]>> = Object.fromEntries(models.map((model) => {
-  //   return [getLocalName(model), toRef(props, model)]
-  // }))
-
-  models.forEach(model => {
-    const name = getLocalName(model)
-
-    watch(localModels[name], (newValue) => {
-      const event = getEventName(model)
-      proxy && proxy.$emit(event, newValue)
-    })
-
-
-    watch(() => props[model], (newValue) => {
-      localModels[name].value = newValue
-    })
+  watch(local, (newValue) => {
+    const event = getEventName(key.toString())
+    proxy && proxy.$emit(event, newValue)
   })
 
 
+  watch(() => props[key], (newValue) => {
+    local.value = newValue
+  })
 
-  return localModels
-
+  return local
 }

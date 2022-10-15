@@ -1,11 +1,10 @@
 <template>
-  <button type="button" @click="localModelValue++">Click me for +1</button>
+  {{ localModelValue }}
+  <button type="button" @click="onClick">Click me for +1</button>
 </template>
 
 <script setup lang="ts">
-import { useLocalModel } from '../../../../src/useLocalModel'
-import { ExtractPropTypes, Ref, ref } from 'vue'
-import { toRef, toRefs } from 'vue-demi'
+import { useLocalModel } from '../../../../dist'
 
 interface Test {
   a: string
@@ -14,20 +13,22 @@ interface Test {
 }
 
 const props = defineProps({
-  modelValue: { type: String, required: true },
-  modelNumber: { type: Number },
+  modelValue: { type: Number, required: true },
+  modelString: { type: String },
   modelObject: { type: Object as () => Test },
   modelArray: { type: Array as () => Test[]}
 })
 
-const c = toRef(props, 'modelValue')
 
-const { localModelValue, localModelNumber } = useLocalModel(props, ['modelValue', 'modelNumber'])
+const localModelValue = useLocalModel(props, 'modelValue')
 
-console.log(localModelValue.value, localModelNumber.value)
+localModelValue.value = 123
+// console.log(localModelValue.value, localModelNumber.value)
 
-localModelValue.value = '123'
-localModelNumber.value =  123
-console.log(c)
+const onClick = () => {
+  console.log(localModelValue.value)
+  localModelValue.value++
+}
+
 
 </script>
