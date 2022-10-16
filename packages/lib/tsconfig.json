@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "ES5",
+    "module": "ESNext",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -9,11 +9,16 @@
     "declarationDir": "dist/types",
     "outDir": "./dist",
     "sourceMap": true,
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "isolatedModules": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "baseUrl": "."
   },
   "include": [
-    "packages/lib/src/*.ts"
+    "src/**/*.ts",
+    "shims-vue.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

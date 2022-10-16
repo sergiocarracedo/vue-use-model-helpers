@@ -1,14 +1,15 @@
 {
-  "name": "vue-use-model-helpers",
+  "name": "vue-use-model-helpers-monorepo",
   "author": "Sergio Carracedo <hi@sergiocarracedo.es>",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "demo-vue2": "yarn workspace demo-vue2",
-    "demo-vue3": "yarn workspace demo-vue3",
+    "demo-vue2": "yarn workspace demo-vue2 dev",
+    "demo-vue3": "yarn workspace demo-vue3 dev",
     "build-lib": "yarn workspace vue-use-model-helpers build"
   },
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "packageManager": "yarn@3.2.4"
 }

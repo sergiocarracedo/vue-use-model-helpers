@@ -1,16 +1,11 @@
 <template>
-  {{ localModelValue }}
+  {{ localModelObject.b }}
   <button type="button" @click="onClick">Click me for +1</button>
 </template>
 
 <script setup lang="ts">
-import { useLocalModel } from '../../../../packages/lib/src/index'
-
-interface Test {
-  a: string
-  b: number
-  c?: string
-}
+import { useLocalModel } from 'vue-use-model-helpers'
+import { Test } from './types'
 
 const props = defineProps({
   modelValue: { type: Number, required: true },
@@ -21,13 +16,14 @@ const props = defineProps({
 
 
 const localModelValue = useLocalModel(props, 'modelValue')
+const localModelObject = useLocalModel(props, 'modelObject')
 
 localModelValue.value = 123
 // console.log(localModelValue.value, localModelNumber.value)
 
 const onClick = () => {
-  console.log(localModelValue.value)
   localModelValue.value++
+  localModelObject.value.b++
 }
 
 
