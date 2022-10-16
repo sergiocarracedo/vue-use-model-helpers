@@ -1,4 +1,5 @@
-import { getCurrentInstance, isVue2, Ref, toRef, UnwrapRef, watch } from 'vue-demi'
+import { isVue2, isVue3 } from 'vue-demi'
+import { getCurrentInstance, Ref, toRef, UnwrapRef, watch } from 'vue'
 
 const getEventName = (model: string): string => {
   if (isVue2 && model === 'value') {
@@ -7,10 +8,10 @@ const getEventName = (model: string): string => {
   return`update:${model}`
 }
 
-
 type ToRef<T> = [T] extends [Ref] ? T : Ref<UnwrapRef<T>>;
 
 export function useLocalModel <T extends object, K extends keyof T>(props: T, key: K): ToRef<T[K]> {
+  console.log(isVue2, isVue3)
   const vm = getCurrentInstance()
 
   if (!vm) {
@@ -20,6 +21,7 @@ export function useLocalModel <T extends object, K extends keyof T>(props: T, ke
   const { proxy } = vm
 
   const local = toRef(props, key)
+
 
   watch(local, (newValue) => {
     const event = getEventName(key.toString())

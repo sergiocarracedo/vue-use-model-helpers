@@ -4,7 +4,7 @@
 </template>
 
 <script setup lang="ts">
-import { useLocalModel } from '../../../../dist'
+import { useLocalModel } from '../../../../packages/lib/src/index'
 
 interface Test {
   a: string

@@ -14,6 +14,6 @@
     "moduleResolution": "node"
   },
   "include": [
-    "src/*.ts"
+    "packages/lib/src/*.ts"
   ]
 }
