@@ -8,7 +8,8 @@
   "scripts": {
     "demo-vue2": "yarn workspace demo-vue2 dev",
     "demo-vue3": "yarn workspace demo-vue3 dev",
-    "build-lib": "yarn workspace vue-use-model-helpers build"
+    "build-lib": "yarn workspace vue-use-model-helpers build",
+    "publish-lib": "yarn workspace vue-use-model-helpers publish"
   },
   "version": "0.0.0",
   "packageManager": "yarn@3.2.4"
