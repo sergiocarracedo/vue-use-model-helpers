@@ -27,7 +27,7 @@
     "test": "jest",
     "switch:2": "vue-demi-switch 2 vue2",
     "switch:3": "vue-demi-switch 3",
-    "publish": "build & npm publish"
+    "publish": "rollup -c & npm publish"
   },
   "repository": {
     "type": "git",
