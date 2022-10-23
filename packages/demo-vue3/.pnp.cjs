@@ -35,7 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["vite", "virtual:1dba25bb7703d2426fbad8a4f141fc1f5e004d87574e6b0ebd31655ef0cdbb8dd42b483394625fd297d6313fabf5c9eaf1346be27d588b67f9fb358ac598bd34#npm:3.1.4"],\
             ["vue", "npm:3.2.40"],\
             ["vue-tsc", "virtual:1dba25bb7703d2426fbad8a4f141fc1f5e004d87574e6b0ebd31655ef0cdbb8dd42b483394625fd297d6313fabf5c9eaf1346be27d588b67f9fb358ac598bd34#npm:0.40.13"],\
-            ["vue-use-model-helpers", "virtual:1dba25bb7703d2426fbad8a4f141fc1f5e004d87574e6b0ebd31655ef0cdbb8dd42b483394625fd297d6313fabf5c9eaf1346be27d588b67f9fb358ac598bd34#file:../lib#../lib::hash=181d27&locator=demo-vue3%40workspace%3A."]\
+            ["vue-use-model-helpers", "virtual:1dba25bb7703d2426fbad8a4f141fc1f5e004d87574e6b0ebd31655ef0cdbb8dd42b483394625fd297d6313fabf5c9eaf1346be27d588b67f9fb358ac598bd34#file:../lib#../lib::hash=1e041e&locator=demo-vue3%40workspace%3A."]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -834,7 +834,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["vite", "virtual:1dba25bb7703d2426fbad8a4f141fc1f5e004d87574e6b0ebd31655ef0cdbb8dd42b483394625fd297d6313fabf5c9eaf1346be27d588b67f9fb358ac598bd34#npm:3.1.4"],\
             ["vue", "npm:3.2.40"],\
             ["vue-tsc", "virtual:1dba25bb7703d2426fbad8a4f141fc1f5e004d87574e6b0ebd31655ef0cdbb8dd42b483394625fd297d6313fabf5c9eaf1346be27d588b67f9fb358ac598bd34#npm:0.40.13"],\
-            ["vue-use-model-helpers", "virtual:1dba25bb7703d2426fbad8a4f141fc1f5e004d87574e6b0ebd31655ef0cdbb8dd42b483394625fd297d6313fabf5c9eaf1346be27d588b67f9fb358ac598bd34#file:../lib#../lib::hash=181d27&locator=demo-vue3%40workspace%3A."]\
+            ["vue-use-model-helpers", "virtual:1dba25bb7703d2426fbad8a4f141fc1f5e004d87574e6b0ebd31655ef0cdbb8dd42b483394625fd297d6313fabf5c9eaf1346be27d588b67f9fb358ac598bd34#file:../lib#../lib::hash=1e041e&locator=demo-vue3%40workspace%3A."]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2797,16 +2797,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],\
       ["vue-demi", [\
         ["npm:0.13.11", {\
-          "packageLocation": "./.yarn/unplugged/vue-demi-virtual-bcb9cd2a98/node_modules/vue-demi/",\
+          "packageLocation": "./.yarn/unplugged/vue-demi-virtual-e5a3824311/node_modules/vue-demi/",\
           "packageDependencies": [\
             ["vue-demi", "npm:0.13.11"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:b3e34a83620fee294921f867dca20c8bd1d2efaa941f3ae901689acd0b50370135ebbf27343efd124855f4abda7d846998fa8a60524505d3bff08654fd02eb5c#npm:0.13.11", {\
-          "packageLocation": "./.yarn/unplugged/vue-demi-virtual-bcb9cd2a98/node_modules/vue-demi/",\
+        ["virtual:d0ca533a99e41b2e2eae10e17b8933124f7d27df490b392e2c990c62e981dbf96cc472b9488699d298a0f329159369ce2788596c323b2dfd76bb08c1afe71e69#npm:0.13.11", {\
+          "packageLocation": "./.yarn/unplugged/vue-demi-virtual-e5a3824311/node_modules/vue-demi/",\
           "packageDependencies": [\
-            ["vue-demi", "virtual:b3e34a83620fee294921f867dca20c8bd1d2efaa941f3ae901689acd0b50370135ebbf27343efd124855f4abda7d846998fa8a60524505d3bff08654fd02eb5c#npm:0.13.11"],\
+            ["vue-demi", "virtual:d0ca533a99e41b2e2eae10e17b8933124f7d27df490b392e2c990c62e981dbf96cc472b9488699d298a0f329159369ce2788596c323b2dfd76bb08c1afe71e69#npm:0.13.11"],\
             ["@types/vue", null],\
             ["@types/vue__composition-api", null],\
             ["@vue/composition-api", null],\
@@ -2875,22 +2875,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["vue-use-model-helpers", [\
-        ["file:../lib#../lib::hash=181d27&locator=demo-vue3%40workspace%3A.", {\
-          "packageLocation": "./.yarn/cache/vue-use-model-helpers-file-85d4f26fe4-41d471ba60.zip/node_modules/vue-use-model-helpers/",\
+        ["file:../lib#../lib::hash=1e041e&locator=demo-vue3%40workspace%3A.", {\
+          "packageLocation": "./.yarn/cache/vue-use-model-helpers-file-61209a03fb-aaa54bf566.zip/node_modules/vue-use-model-helpers/",\
           "packageDependencies": [\
-            ["vue-use-model-helpers", "file:../lib#../lib::hash=181d27&locator=demo-vue3%40workspace%3A."]\
+            ["vue-use-model-helpers", "file:../lib#../lib::hash=1e041e&locator=demo-vue3%40workspace%3A."]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:1dba25bb7703d2426fbad8a4f141fc1f5e004d87574e6b0ebd31655ef0cdbb8dd42b483394625fd297d6313fabf5c9eaf1346be27d588b67f9fb358ac598bd34#file:../lib#../lib::hash=181d27&locator=demo-vue3%40workspace%3A.", {\
-          "packageLocation": "./.yarn/__virtual__/vue-use-model-helpers-virtual-b3e34a8362/0/cache/vue-use-model-helpers-file-85d4f26fe4-41d471ba60.zip/node_modules/vue-use-model-helpers/",\
+        ["virtual:1dba25bb7703d2426fbad8a4f141fc1f5e004d87574e6b0ebd31655ef0cdbb8dd42b483394625fd297d6313fabf5c9eaf1346be27d588b67f9fb358ac598bd34#file:../lib#../lib::hash=1e041e&locator=demo-vue3%40workspace%3A.", {\
+          "packageLocation": "./.yarn/__virtual__/vue-use-model-helpers-virtual-d0ca533a99/0/cache/vue-use-model-helpers-file-61209a03fb-aaa54bf566.zip/node_modules/vue-use-model-helpers/",\
           "packageDependencies": [\
-            ["vue-use-model-helpers", "virtual:1dba25bb7703d2426fbad8a4f141fc1f5e004d87574e6b0ebd31655ef0cdbb8dd42b483394625fd297d6313fabf5c9eaf1346be27d588b67f9fb358ac598bd34#file:../lib#../lib::hash=181d27&locator=demo-vue3%40workspace%3A."],\
+            ["vue-use-model-helpers", "virtual:1dba25bb7703d2426fbad8a4f141fc1f5e004d87574e6b0ebd31655ef0cdbb8dd42b483394625fd297d6313fabf5c9eaf1346be27d588b67f9fb358ac598bd34#file:../lib#../lib::hash=1e041e&locator=demo-vue3%40workspace%3A."],\
             ["@types/vue", null],\
             ["@types/vue__composition-api", null],\
             ["@vue/composition-api", null],\
             ["vue", "npm:3.2.40"],\
-            ["vue-demi", "virtual:b3e34a83620fee294921f867dca20c8bd1d2efaa941f3ae901689acd0b50370135ebbf27343efd124855f4abda7d846998fa8a60524505d3bff08654fd02eb5c#npm:0.13.11"]\
+            ["vue-demi", "virtual:d0ca533a99e41b2e2eae10e17b8933124f7d27df490b392e2c990c62e981dbf96cc472b9488699d298a0f329159369ce2788596c323b2dfd76bb08c1afe71e69#npm:0.13.11"]\
           ],\
           "packagePeers": [\
             "@types/vue",\

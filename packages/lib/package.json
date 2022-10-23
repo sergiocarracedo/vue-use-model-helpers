@@ -1,6 +1,6 @@
 {
   "name": "vue-use-model-helpers",
-  "version": "4.0.0",
+  "version": "4.0.0.beta.1",
   "description": "Helpers to manage custom v-model and .sync using composition API",
   "author": "Sergio Carracedo <hi@sergiocarracedo.es>",
   "license": "MIT",
@@ -25,7 +25,8 @@
     "build:watch": "rollup -c -w",
     "test": "jest",
     "switch:2": "vue-demi-switch 2 vue2",
-    "switch:3": "vue-demi-switch 3"
+    "switch:3": "vue-demi-switch 3",
+    "publish": "build & npm publish"
   },
   "repository": {
     "type": "git",
@@ -36,8 +37,7 @@
   },
   "homepage": "https://github.com/sergiocarracedo/vue-use-model-helpers#readme",
   "peerDependencies": {
-    "@vue/composition-api": "^1.0.0-rc.1",
-    "vue": "^2.0.0 || >=3.0.0"
+    "vue": "^2.7.0 || >=3.0.0"
   },
   "peerDependenciesMeta": {
     "@vue/composition-api": {
@@ -45,6 +45,9 @@
     }
   },
   "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/types": "^7.19.4",
+    "@rollup/plugin-babel": "6.0.2",
     "@rollup/plugin-typescript": "^8.2.1",
     "@types/jest": "^25.2.1",
     "@vue/compiler-sfc": "^3.0.11",
@@ -52,7 +55,7 @@
     "tslib": "^2.4.0",
     "typescript": "^4.2.4",
     "vue": "^3.2.x",
-    "vue2": "npm:vue@2"
+    "vue2": "npm:vue@2.7"
   },
   "dependencies": {
     "vue-demi": "^0.13.11"

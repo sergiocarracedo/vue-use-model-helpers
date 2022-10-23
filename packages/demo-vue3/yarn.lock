@@ -2462,7 +2462,7 @@ __metadata:
 
 "vue-use-model-helpers@file:../lib::locator=demo-vue3%40workspace%3A.":
   version: 4.0.0
-  resolution: "vue-use-model-helpers@file:../lib#../lib::hash=181d27&locator=demo-vue3%40workspace%3A."
+  resolution: "vue-use-model-helpers@file:../lib#../lib::hash=1e041e&locator=demo-vue3%40workspace%3A."
   dependencies:
     vue-demi: ^0.13.11
   peerDependencies:
@@ -2471,7 +2471,7 @@ __metadata:
   peerDependenciesMeta:
     "@vue/composition-api":
       optional: true
-  checksum: 41d471ba601bc4f3b5e37d5fef0be9fd3d5865e756e49bdd58283dc325e937cf4c60ccf29d7b1ca41d000ff3d16300c3263b3a5ef706df2762c2f5ab556b0d0f
+  checksum: aaa54bf56642f8cae0d99a193669008bcaa375316cc87d0c65ce0395376b30e484213a8efec9ac0f0614fda77f1b438faf37ded54ec282f47cb2bcd3d4dc20f4
   languageName: node
   linkType: hard
 

@@ -1,8 +1,8 @@
-# Vue use model helpers
+# Vue use model helpers 4
 
 This library provides a helper to convert a component's property to a local Ref you can mutate when you are using composition-api, simplifying  the management of the custom `v-model` and `.sync`
 
-This library works with Vue 2.x and Vue 3
+This library works with Vue 2.7+ and Vue 3
 
 ## Motivation
 
@@ -18,20 +18,21 @@ If the property is a `v-model` or uses `.sync` you also must take care of emitti
 
 The motivation of this library is simplifying this task and reducing the amount of repetitive code.
 
+## Requeriments
+Vue 2.7+ or 3.x
+If you need support for vue 2.5+ and composition Api, please use the `2.x` version
+
+## Improvements in 4.x
+* The library return just one property at time in order of be able to infer prop type
+* Same code runs in vue 2.7 and 3.x
+
+
 ## Getting started
 
 ### Install
-
-## Vue 2.x
-`npm i vue-use-model-helper@2.x --save` 
+`npm i vue-use-model-helper@4 --save` 
 or
-`yarn add vue-use-model-helper@2.x`
-
-## Vue 3
-`npm i vue-use-model-helper@3.x --save`
-or
-`yarn add vue-use-model-helper@3.x`
-
+`yarn add vue-use-model-helper@4`
 
 ### Usage
 In your component:
@@ -46,7 +47,7 @@ export default defineComponent({
   } ,
   setup(props) {
     
-    const { localValue } = useLocalModel(['value'])
+    const localValue = useLocalModel(props, 'value')
   
     return {
       localValue  
@@ -59,8 +60,6 @@ export default defineComponent({
 Now you can use `localValue` in your component, and the helper takes care of sync the values, emit the update event, etc
 
 The component can work with both `value` and `.sync` emitting the correct event to keep the property updated
-
-The local variable name follows the rule `local` + `propName capitalized`
 
 ## Examples
 
@@ -80,7 +79,8 @@ export default defineComponent({
     counter: Number // This propery has .sync in the parent component  
   }  ,
   setup(props) {
-    const { localValue, localCounter } = useLocalModel(['value', 'counter'])
+    const localValue = useLocalModel(props, 'value')
+    const localCounter = useLocalModel(props, 'counter')
   
     const increaseCounter = () => {
         localCounter.value = localCounter.value + 1

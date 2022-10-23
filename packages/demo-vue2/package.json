@@ -1,15 +1,21 @@
 {
   "name": "demo-vue2",
   "packageManager": "yarn@3.2.4",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
-    "vue": "2",
+    "vue": "2.7.x",
     "vue-use-model-helpers": "file:../lib"
   },
   "devDependencies": {
-    "vite-plugin-vue2": "^2.0.2",
-    "vue-template-compiler": "^2.7.13",
-    "typescript": "^4.6.4",
     "eslint": "^8.25.0",
-    "eslint-plugin-vue": "^9.6.0"
+    "eslint-plugin-vue": "^9.6.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vite-plugin-vue2": "^2.0.2",
+    "vue-template-compiler": "^2.7.13"
   }
 }
