@@ -10,7 +10,8 @@
 </template>
 
 <script setup lang="ts">
-import { useLocalModel } from 'vue-use-model-helpers'
+// import { useLocalModel } from 'vue-use-model-helpers'
+import { useLocalModel } from '../../../lib/src'
 import { Test } from './types'
 import { ref, Ref, shallowRef } from 'vue'
 
@@ -22,8 +23,7 @@ const props = defineProps({
 })
 
 
-const localModelValue = useLocalModel(props, 'modelValue')
-const localModelObject = useLocalModel(props, 'modelObject')
+const { localModelValue, localModelObject } = useLocalModel(props, ['modelValue', 'modelObject'])
 
 localModelValue.value = 123
 // console.log(localModelValue.value, localModelNumber.value)

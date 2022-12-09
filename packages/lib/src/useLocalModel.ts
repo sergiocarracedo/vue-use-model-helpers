@@ -1,5 +1,5 @@
 import { isVue2 } from 'vue-demi'
-import { getCurrentInstance, Ref, shallowRef, watch } from 'vue'
+import { getCurrentInstance, ref, Ref, watch } from 'vue'
 
 const getEventName = (model: string): string => {
   if (isVue2 && model === 'value') {
@@ -8,7 +8,15 @@ const getEventName = (model: string): string => {
   return`update:${model}`
 }
 
-export function useLocalModel <T extends object, K extends keyof T>(props: T, key: K): Ref<T[K]> {
+const getLocalModelName = <T>(modelName: keyof T): keyof T => {
+ return `local${modelName.toString().charAt(0).toUpperCase()}${modelName.toString().slice(1)}` as keyof T
+}
+
+type LocalModels<T, K extends keyof T> = {
+  [P in K as `local${Capitalize<string & K>}`]: Ref<T[P]>
+}
+
+export function useLocalModel <T extends object, M extends (keyof T)[]>(props: T, models: M): LocalModels<T, M[number]> {
   const vm = getCurrentInstance()
 
   if (!vm) {
@@ -16,17 +24,21 @@ export function useLocalModel <T extends object, K extends keyof T>(props: T, ke
   }
 
   const { proxy } = vm
-  const local: Ref<T[K]> = shallowRef(props[key])
+  const localModels: LocalModels<T, typeof models[number]> = {
+    ...Object.fromEntries(models.map(model => [getLocalModelName(model), ref(props[model])]))
+  } as LocalModels<T, typeof models[number]>
 
-  watch(local, (newValue) => {
-    const event = getEventName(key.toString())
-    proxy && proxy.$emit(event, newValue)
-  }, { deep: true })
+  models.forEach((model) => {
+    const name = getLocalModelName(model)
+    watch(localModels[name], (newValue) => {
+      console.log('aasdfsdf', newValue)
+      proxy && proxy.$emit(getEventName(model.toString()), newValue)
+    }, { deep: true })
 
-
-  watch(() => props[key], (newValue) => {
-    local.value = newValue
+    watch(() => props[model], (newValue) => {
+      localModels[name].value = newValue
+    }, { deep: true })
   })
 
-  return local
+  return localModels
 }
