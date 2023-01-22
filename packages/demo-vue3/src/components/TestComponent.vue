@@ -19,14 +19,18 @@ const props = defineProps({
   modelValue: { type: Number, required: true },
   modelString: { type: String },
   modelObject: { type: Object as () => Test },
-  modelArray: { type: Array as () => Test[]}
+  modelArray: { type: Array as () => Test[]},
+  test: { type: String, required: true}
 })
 
 
-const { localModelValue, localModelObject } = useLocalModel(props, ['modelValue', 'modelObject'])
+
+const x = useLocalModel(props, ['modelValue', 'modelObject','modelArray', 'modelString'])
+
+const { localModelValue, localModelObject } = useLocalModel(props, ['modelValue', 'modelObject','modelArray', 'modelString'])
+
 
 localModelValue.value = 123
-// console.log(localModelValue.value, localModelNumber.value)
 
 
 const test1: Ref = ref({
