@@ -4,6 +4,11 @@ This library provides a helper to convert a component's property to a local Ref 
 
 This library works with Vue 2.x and Vue 3
 
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+This package is deprecated and no longer maintained. Please use VueUse `useVModels` and/or ' useVModel' instead https://vueuse.org/core/useVModels/ with the option `{ passive: true }` to obtain the same behavior as this package.
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+
+
 > For Vue 2.x check `2.x` branch
 
 ## Motivation
